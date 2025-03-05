@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS MiEmpresa;
+USE MiEmpresa;
+
+CREATE TABLE IF NOT EXISTS clientes (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    telefono VARCHAR(20),
+    fecha_registro DATE DEFAULT CURRENT_DATE
+);
+
+
+INSERT INTO clientes (nombre, email, telefono) VALUES
+('Juan Perez', 'juan.perez@email.com', '123456789'),
+('Ana Gomez', 'ana.gomez@email.com', '987654321'),
+('Carlos Lopez', 'carlos.lopez@email.com', '456123789'),
+('Maria Rodriguez', 'maria.rodriguez@email.com', '789456123'),
+('Luis Fernandez', 'luis.fernandez@email.com', '321654987');
+
+
+SELECT * FROM clientes;
